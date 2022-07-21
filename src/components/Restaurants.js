@@ -30,11 +30,18 @@ export default class Restaurants extends Component {
         switch(step) {
             case 1:
                 return (
-                    <HomeScreen/>
+                    <HomeScreen
+                    nextStep = {this.nextStep}
+                    values = {values}
+                    handleLocationInput = {this.handleLocationInput}
+                    />
                 )
             case 2:
                 return (
-                    <RandomRest/>
+                    <RandomRest
+                    nextStep = {this.nextStep}
+                    values = {values}
+                    />
                 )
             default:
         }   

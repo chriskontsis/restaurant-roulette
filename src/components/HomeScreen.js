@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { logDOM } from '@testing-library/react';
 import '../App.css'
 
-const HomeScreen = () => {
+const HomeScreen = ({values, handleResponse, nextStep}) => {
   const [loading,setLoading] = useState(false);
 
 const axios = require("axios");

@@ -4,6 +4,15 @@
   box-sizing: border-box;
 }
 
+/* LANDING PAGE */
+#form-container {
+  position: absolute;
+}
+
+#container-items {
+  z-index: 2;
+}
+
 #img-container {
   display: flex;
   align-items: center;

@@ -1,8 +1,13 @@
 import React from 'react'
 
-function RandomRest() {
+function RandomRest({values, handleChange}) {
+
+
+
   return (
-    <div>RandomRest</div>
+    <div>
+
+    </div>
   )
 }
 
