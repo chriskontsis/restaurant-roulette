@@ -4,25 +4,9 @@ import { useEffect, useState } from "react";
 import { logDOM } from '@testing-library/react';
 import '../App.css'
 
-const HomeScreen = ({values, handleResponse, nextStep}) => {
+const HomeScreen = ({values, handleLocationInput, nextStep}) => {
   const [loading,setLoading] = useState(false);
 
-const axios = require("axios");
-
-const options = {
-  method: 'GET',
-  url: 'https://restaurants-near-me-usa.p.rapidapi.com/restaurants/location/state/MI/city/West%20Bloomfield/0',
-  headers: {
-    'X-RapidAPI-Key': 'c08c6ad559msh3fc58389c3580cbp1c885bjsnd19cbe0c1972',
-    'X-RapidAPI-Host': 'restaurants-near-me-usa.p.rapidapi.com'
-  }
-};
-
-axios.request(options).then(function (response) {
-	console.log(response.data);
-}).catch(function (error) {
-	console.error(error);
-});
 
   return (
     <div id="page-container"> 
@@ -37,7 +21,8 @@ axios.request(options).then(function (response) {
         <h1 id="title"> Enter your zipcode <br /></h1>
         <input id="input-form"
           type="text"
-         
+           value = {values.location}
+           onChange={handleLocationInput("location")} 
         /> <br />
         <button id="next-button">Next</button>
       </form>

@@ -16,13 +16,14 @@ export default class Restaurants extends Component {
             this.setState({step: step + 1})
       }
       
-      handleLocationInput = (e) => {
-        this.setState({loaction: e.target.value})
+      handleLocationInput = (input) => (e) => {
+        this.setState({ [input]: e.target.value });
+        console.log(e.target.value);
       }
       
       
     
-  render() {
+  render() { 
     const {step} = this.state;
     const {location, name, description, website} = this.state;
     const values = {location, name, description, website};
